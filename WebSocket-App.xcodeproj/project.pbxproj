@@ -17,6 +17,8 @@
 		E9CB099028B62AD5000DF8B9 /* BlueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB098F28B62AD5000DF8B9 /* BlueLabel.swift */; };
 		E9CB099228B62B9B000DF8B9 /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB099128B62B9B000DF8B9 /* PurpleButton.swift */; };
 		E9CB099528B630BB000DF8B9 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = E9CB099428B630BB000DF8B9 /* SocketIO */; };
+		E9CB099828B63358000DF8B9 /* SocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB099728B63358000DF8B9 /* SocketView.swift */; };
+		E9CB099A28B636AE000DF8B9 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB099928B636AE000DF8B9 /* SocketManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		E9CB098D28B628CC000DF8B9 /* BlackLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackLabel.swift; sourceTree = "<group>"; };
 		E9CB098F28B62AD5000DF8B9 /* BlueLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueLabel.swift; sourceTree = "<group>"; };
 		E9CB099128B62B9B000DF8B9 /* PurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
+		E9CB099728B63358000DF8B9 /* SocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketView.swift; sourceTree = "<group>"; };
+		E9CB099928B636AE000DF8B9 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +68,15 @@
 		E9CB097728B62873000DF8B9 /* WebSocket-App */ = {
 			isa = PBXGroup;
 			children = (
-				E9CB098C28B628C2000DF8B9 /* Views */,
+				E9CB099628B63332000DF8B9 /* HostingViewTest */,
 				E9CB097828B62873000DF8B9 /* AppDelegate.swift */,
 				E9CB097A28B62873000DF8B9 /* SceneDelegate.swift */,
-				E9CB097C28B62873000DF8B9 /* ViewController.swift */,
+				E9CB099728B63358000DF8B9 /* SocketView.swift */,
 				E9CB097E28B62873000DF8B9 /* Main.storyboard */,
 				E9CB098128B62874000DF8B9 /* Assets.xcassets */,
 				E9CB098328B62874000DF8B9 /* LaunchScreen.storyboard */,
 				E9CB098628B62874000DF8B9 /* Info.plist */,
+				E9CB099928B636AE000DF8B9 /* SocketManager.swift */,
 			);
 			path = "WebSocket-App";
 			sourceTree = "<group>";
@@ -84,6 +89,15 @@
 				E9CB099128B62B9B000DF8B9 /* PurpleButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E9CB099628B63332000DF8B9 /* HostingViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				E9CB097C28B62873000DF8B9 /* ViewController.swift */,
+				E9CB098C28B628C2000DF8B9 /* Views */,
+			);
+			path = HostingViewTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +179,8 @@
 			files = (
 				E9CB097D28B62873000DF8B9 /* ViewController.swift in Sources */,
 				E9CB097928B62873000DF8B9 /* AppDelegate.swift in Sources */,
+				E9CB099A28B636AE000DF8B9 /* SocketManager.swift in Sources */,
+				E9CB099828B63358000DF8B9 /* SocketView.swift in Sources */,
 				E9CB098E28B628CC000DF8B9 /* BlackLabel.swift in Sources */,
 				E9CB099028B62AD5000DF8B9 /* BlueLabel.swift in Sources */,
 				E9CB097B28B62873000DF8B9 /* SceneDelegate.swift in Sources */,

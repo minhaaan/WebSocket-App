@@ -1,5 +1,6 @@
 import UIKit
 import SwiftUI
+import SocketIO
 
 final class ViewController: UIViewController {
   
@@ -8,7 +9,11 @@ final class ViewController: UIViewController {
     rootView: BlueLabel(text: "BlueLabel")
   ).view!
   private let purpleButton = UIHostingController(
-    rootView: PurpleButton(tapAction: { print("DEBUG: taptaptap") })
+    rootView: PurpleButton(
+      tapAction: {
+        print("DEBUG: taptaptap")
+      }
+    )
   ).view!
   
   override func viewDidLoad() {
@@ -16,6 +21,29 @@ final class ViewController: UIViewController {
     // Do any additional setup after loading the view.
     
     setupLayout()
+  }
+  
+  func connect() {
+    let manager = SocketManager(
+      socketURL: URL(string: "http://127.0.0.1:8080")!,
+      config: [.log(true)]
+    )
+    let socket = manager.defaultSocket
+    
+    socket.on(clientEvent: .connect) { data, ack in
+      print("DEBUG: socket connected")
+    }
+    
+    socket.on("echo") { data, ack in
+      guard let cur = data[0] as? Double else { return }
+      
+      socket.emitWithAck("aa", cur).timingOut(after: 0) { data in
+        if data.first as? String ?? "passed" == SocketAckStatus.noAck {
+          
+        }
+        
+      }
+    }
   }
 
 
