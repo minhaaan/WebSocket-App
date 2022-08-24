@@ -10,9 +10,13 @@ import SwiftUI
 struct SocketView: View {
   @State private var inputText: String = ""
   
+//  private let socketIOManager = SocketIOManager.shared
+  private let webSocketManager = WebSocketManager.shared
+  
   var body: some View {
     VStack {
       Button {
+        webSocketManager.connect()
       } label: {
         Text("connect")
           .foregroundColor(.white)
@@ -23,6 +27,7 @@ struct SocketView: View {
       .cornerRadius(12)
       
       Button {
+        webSocketManager.disconnect()
       } label: {
         Text("disconnect")
           .foregroundColor(.white)
@@ -44,7 +49,7 @@ struct SocketView: View {
         .padding(.horizontal, 40)
       
       Button {
-        print("DEBUG: send message is \(inputText)")
+        webSocketManager.send(text: inputText)
         inputText = ""
       } label: {
         Text("Send")
