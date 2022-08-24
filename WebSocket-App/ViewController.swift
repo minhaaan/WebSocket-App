@@ -1,18 +1,15 @@
-//
-//  ViewController.swift
-//  WebSocket-App
-//
-//  Created by 최민한 on 2022/08/24.
-//
-
 import UIKit
 import SwiftUI
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
   
-  let blackView = UIHostingController(rootView: BlackLabel())
-
-  let blueLabel = UIHostingController(rootView: BlueLabel()).view!
+  private let blackView = UIHostingController(rootView: BlackLabel())
+  private let blueLabel = UIHostingController(
+    rootView: BlueLabel(text: "BlueLabel")
+  ).view!
+  private let purpleButton = UIHostingController(
+    rootView: PurpleButton(tapAction: { print("DEBUG: taptaptap") })
+  ).view!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -40,6 +37,13 @@ extension ViewController {
     NSLayoutConstraint.activate([
       blueLabel.centerXAnchor.constraint(equalTo: blackView.view.centerXAnchor),
       blueLabel.topAnchor.constraint(equalTo: blackView.view.bottomAnchor, constant: 20)
+    ])
+    
+    view.addSubview(purpleButton)
+    purpleButton.translatesAutoresizingMaskIntoConstraints = false
+    NSLayoutConstraint.activate([
+      purpleButton.centerXAnchor.constraint(equalTo: blueLabel.centerXAnchor),
+      purpleButton.topAnchor.constraint(equalTo: blueLabel.bottomAnchor, constant: 20)
     ])
   }
 }

@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct BlueLabel: View {
+  let text: String
+  
   var body: some View {
     HStack {
-      Text("Hello World!")
+      Text(text)
         .foregroundColor(.blue)
         .font(.system(size: 24, weight: .black, design: .rounded))
     }
@@ -22,6 +24,6 @@ struct BlueLabel: View {
 
 struct BlueLabel_Previews: PreviewProvider {
   static var previews: some View {
-    BlueLabel()
+    BlueLabel(text: "123")
   }
 }
