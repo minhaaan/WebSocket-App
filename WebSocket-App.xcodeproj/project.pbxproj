@@ -16,9 +16,9 @@
 		E9CB098E28B628CC000DF8B9 /* BlackLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB098D28B628CC000DF8B9 /* BlackLabel.swift */; };
 		E9CB099028B62AD5000DF8B9 /* BlueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB098F28B62AD5000DF8B9 /* BlueLabel.swift */; };
 		E9CB099228B62B9B000DF8B9 /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB099128B62B9B000DF8B9 /* PurpleButton.swift */; };
-		E9CB099528B630BB000DF8B9 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = E9CB099428B630BB000DF8B9 /* SocketIO */; };
 		E9CB099828B63358000DF8B9 /* SocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB099728B63358000DF8B9 /* SocketView.swift */; };
-		E9CB099A28B636AE000DF8B9 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB099928B636AE000DF8B9 /* SocketManager.swift */; };
+		E9CCB93528B648C300087E37 /* WebSocketKit in Frameworks */ = {isa = PBXBuildFile; productRef = E9CCB93428B648C300087E37 /* WebSocketKit */; };
+		E9CCB93728B648E700087E37 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCB93628B648E700087E37 /* WebSocketManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		E9CB098F28B62AD5000DF8B9 /* BlueLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueLabel.swift; sourceTree = "<group>"; };
 		E9CB099128B62B9B000DF8B9 /* PurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
 		E9CB099728B63358000DF8B9 /* SocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketView.swift; sourceTree = "<group>"; };
-		E9CB099928B636AE000DF8B9 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
+		E9CCB93628B648E700087E37 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9CB099528B630BB000DF8B9 /* SocketIO in Frameworks */,
+				E9CCB93528B648C300087E37 /* WebSocketKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,11 +72,11 @@
 				E9CB097828B62873000DF8B9 /* AppDelegate.swift */,
 				E9CB097A28B62873000DF8B9 /* SceneDelegate.swift */,
 				E9CB099728B63358000DF8B9 /* SocketView.swift */,
+				E9CCB93628B648E700087E37 /* WebSocketManager.swift */,
 				E9CB097E28B62873000DF8B9 /* Main.storyboard */,
 				E9CB098128B62874000DF8B9 /* Assets.xcassets */,
 				E9CB098328B62874000DF8B9 /* LaunchScreen.storyboard */,
 				E9CB098628B62874000DF8B9 /* Info.plist */,
-				E9CB099928B636AE000DF8B9 /* SocketManager.swift */,
 			);
 			path = "WebSocket-App";
 			sourceTree = "<group>";
@@ -117,7 +117,7 @@
 			);
 			name = "WebSocket-App";
 			packageProductDependencies = (
-				E9CB099428B630BB000DF8B9 /* SocketIO */,
+				E9CCB93428B648C300087E37 /* WebSocketKit */,
 			);
 			productName = "WebSocket-App";
 			productReference = E9CB097528B62873000DF8B9 /* WebSocket-App.app */;
@@ -148,7 +148,7 @@
 			);
 			mainGroup = E9CB096C28B62873000DF8B9;
 			packageReferences = (
-				E9CB099328B630BB000DF8B9 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+				E9CCB93328B648C300087E37 /* XCRemoteSwiftPackageReference "websocket-kit" */,
 			);
 			productRefGroup = E9CB097628B62873000DF8B9 /* Products */;
 			projectDirPath = "";
@@ -179,9 +179,9 @@
 			files = (
 				E9CB097D28B62873000DF8B9 /* ViewController.swift in Sources */,
 				E9CB097928B62873000DF8B9 /* AppDelegate.swift in Sources */,
-				E9CB099A28B636AE000DF8B9 /* SocketManager.swift in Sources */,
 				E9CB099828B63358000DF8B9 /* SocketView.swift in Sources */,
 				E9CB098E28B628CC000DF8B9 /* BlackLabel.swift in Sources */,
+				E9CCB93728B648E700087E37 /* WebSocketManager.swift in Sources */,
 				E9CB099028B62AD5000DF8B9 /* BlueLabel.swift in Sources */,
 				E9CB097B28B62873000DF8B9 /* SceneDelegate.swift in Sources */,
 				E9CB099228B62B9B000DF8B9 /* PurpleButton.swift in Sources */,
@@ -404,21 +404,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E9CB099328B630BB000DF8B9 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+		E9CCB93328B648C300087E37 /* XCRemoteSwiftPackageReference "websocket-kit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			repositoryURL = "https://github.com/vapor/websocket-kit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 16.0.0;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E9CB099428B630BB000DF8B9 /* SocketIO */ = {
+		E9CCB93428B648C300087E37 /* WebSocketKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E9CB099328B630BB000DF8B9 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
-			productName = SocketIO;
+			package = E9CCB93328B648C300087E37 /* XCRemoteSwiftPackageReference "websocket-kit" */;
+			productName = WebSocketKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
