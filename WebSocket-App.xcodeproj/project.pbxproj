@@ -13,6 +13,8 @@
 		E9CB098028B62873000DF8B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CB097E28B62873000DF8B9 /* Main.storyboard */; };
 		E9CB098228B62874000DF8B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CB098128B62874000DF8B9 /* Assets.xcassets */; };
 		E9CB098528B62874000DF8B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CB098328B62874000DF8B9 /* LaunchScreen.storyboard */; };
+		E9CB098E28B628CC000DF8B9 /* BlackLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB098D28B628CC000DF8B9 /* BlackLabel.swift */; };
+		E9CB099028B62AD5000DF8B9 /* BlueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB098F28B62AD5000DF8B9 /* BlueLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E9CB098128B62874000DF8B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9CB098428B62874000DF8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9CB098628B62874000DF8B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9CB098D28B628CC000DF8B9 /* BlackLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackLabel.swift; sourceTree = "<group>"; };
+		E9CB098F28B62AD5000DF8B9 /* BlueLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		E9CB097728B62873000DF8B9 /* WebSocket-App */ = {
 			isa = PBXGroup;
 			children = (
+				E9CB098C28B628C2000DF8B9 /* Views */,
 				E9CB097828B62873000DF8B9 /* AppDelegate.swift */,
 				E9CB097A28B62873000DF8B9 /* SceneDelegate.swift */,
 				E9CB097C28B62873000DF8B9 /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				E9CB098628B62874000DF8B9 /* Info.plist */,
 			);
 			path = "WebSocket-App";
+			sourceTree = "<group>";
+		};
+		E9CB098C28B628C2000DF8B9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9CB098D28B628CC000DF8B9 /* BlackLabel.swift */,
+				E9CB098F28B62AD5000DF8B9 /* BlueLabel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +154,8 @@
 			files = (
 				E9CB097D28B62873000DF8B9 /* ViewController.swift in Sources */,
 				E9CB097928B62873000DF8B9 /* AppDelegate.swift in Sources */,
+				E9CB098E28B628CC000DF8B9 /* BlackLabel.swift in Sources */,
+				E9CB099028B62AD5000DF8B9 /* BlueLabel.swift in Sources */,
 				E9CB097B28B62873000DF8B9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
