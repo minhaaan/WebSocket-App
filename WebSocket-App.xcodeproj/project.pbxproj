@@ -16,6 +16,7 @@
 		E9CB098E28B628CC000DF8B9 /* BlackLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB098D28B628CC000DF8B9 /* BlackLabel.swift */; };
 		E9CB099028B62AD5000DF8B9 /* BlueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB098F28B62AD5000DF8B9 /* BlueLabel.swift */; };
 		E9CB099228B62B9B000DF8B9 /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB099128B62B9B000DF8B9 /* PurpleButton.swift */; };
+		E9CB099528B630BB000DF8B9 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = E9CB099428B630BB000DF8B9 /* SocketIO */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CB099528B630BB000DF8B9 /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +102,9 @@
 			dependencies = (
 			);
 			name = "WebSocket-App";
+			packageProductDependencies = (
+				E9CB099428B630BB000DF8B9 /* SocketIO */,
+			);
 			productName = "WebSocket-App";
 			productReference = E9CB097528B62873000DF8B9 /* WebSocket-App.app */;
 			productType = "com.apple.product-type.application";
@@ -128,6 +133,9 @@
 				Base,
 			);
 			mainGroup = E9CB096C28B62873000DF8B9;
+			packageReferences = (
+				E9CB099328B630BB000DF8B9 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+			);
 			productRefGroup = E9CB097628B62873000DF8B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -378,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9CB099328B630BB000DF8B9 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 16.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9CB099428B630BB000DF8B9 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9CB099328B630BB000DF8B9 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9CB096D28B62873000DF8B9 /* Project object */;
 }
